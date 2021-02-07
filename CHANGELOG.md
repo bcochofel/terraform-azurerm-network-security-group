@@ -11,6 +11,7 @@
 
 ### Feat
 - firewall rules
+- firewall rules
 - output variables
 - nsg resource
 
