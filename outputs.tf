@@ -22,7 +22,10 @@ EOT
   value       = azurerm_network_security_group.nsg.location
 }
 
-output "predefined_rules" {
-  description = "Predefined set of rules."
-  value       = local.predefined_rules
+output "firewall_rules" {
+  description = "Firewall Rules in this NSG."
+  value = concat(
+    azurerm_network_security_rule.predefined_rules[*],
+    azurerm_network_security_rule.custom_rules[*]
+  )
 }

@@ -14,6 +14,6 @@ output "location" {
   value = module.nsg.location
 }
 
-output "predefined_rules" {
-  value = module.nsg.predefined_rules
+output "firewall_rules" {
+  value = module.nsg.firewall_rules
 }

@@ -84,3 +84,41 @@ EOT
     WinRM = ["Inbound", "Allow", "TCP", "*", "5986", "WinRM"]
   }
 }
+
+variable "source_address_prefix" {
+  description = <<EOT
+Source address prefix to be applied to all predefined rules
+list(string) only allowed one element (CIDR, `*`, source IP range or Tags)
+Example ["10.0.3.0/24"] or ["VirtualNetwork"]
+EOT
+  type        = list(string)
+  default     = ["*"]
+}
+
+variable "source_address_prefixes" {
+  description = <<EOT
+Destination address prefix to be applied to all predefined rules
+Example ["10.0.3.0/32","10.0.3.128/32"]
+EOT
+  type        = list(string)
+  default     = null
+}
+
+variable "destination_address_prefix" {
+  description = <<EOT
+Destination address prefix to be applied to all predefined rules
+list(string) only allowed one element (CIDR, `*`, source IP range or Tags)
+Example ["10.0.3.0/24"] or ["VirtualNetwork"]
+EOT
+  type        = list(string)
+  default     = ["*"]
+}
+
+variable "destination_address_prefixes" {
+  description = <<EOT
+Destination address prefix to be applied to all predefined rules
+Example ["10.0.3.0/32","10.0.3.128/32"]
+EOT
+  type        = list(string)
+  default     = null
+}

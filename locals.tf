@@ -1,3 +1,0 @@
-locals {
-  predefined_rules = ""
-}
