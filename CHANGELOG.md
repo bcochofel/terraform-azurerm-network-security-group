@@ -15,6 +15,9 @@
 - output variables
 - nsg resource
 
+### Test
+- terratest examples
+
 
 <a name="0.1.0"></a>
 ## 0.1.0 - 2021-02-07
