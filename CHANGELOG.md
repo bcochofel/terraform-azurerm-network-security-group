@@ -10,6 +10,7 @@
 - markdown lint
 
 ### Feat
+- firewall rules
 - output variables
 - nsg resource
 
