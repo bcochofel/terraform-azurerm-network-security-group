@@ -1,0 +1,3 @@
+locals {
+  predefined_rules = ""
+}

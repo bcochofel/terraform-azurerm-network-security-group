@@ -21,3 +21,8 @@ The location/region where the network security group is created.
 EOT
   value       = azurerm_network_security_group.nsg.location
 }
+
+output "predefined_rules" {
+  description = "Predefined set of rules."
+  value       = local.predefined_rules
+}
