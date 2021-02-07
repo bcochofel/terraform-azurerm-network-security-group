@@ -31,6 +31,7 @@ module "nsg" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 | Name      | Version    |
@@ -62,6 +63,7 @@ module "nsg" {
 | resource\_group\_name | The name of the resource group where the network security group is created. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 
 ## Run tests
 
