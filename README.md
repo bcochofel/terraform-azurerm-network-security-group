@@ -32,6 +32,7 @@ module "nsg" {
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
+
 ## Requirements
 
 | Name      | Version    |
@@ -58,6 +59,7 @@ module "nsg" {
 No output.
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 
 ## Run tests
 
