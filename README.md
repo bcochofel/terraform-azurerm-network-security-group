@@ -33,32 +33,32 @@ module "nsg" {
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
+| Name      | Version    |
+| --------- | ---------- |
 | terraform | >= 0.12.20 |
-| azurerm | >= 2.41.0 |
+| azurerm   | >= 2.41.0  |
 
 ## Providers
 
-| Name | Version |
-|------|---------|
+| Name    | Version   |
+| ------- | --------- |
 | azurerm | >= 2.41.0 |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| name | The name of the network security group.<br>Changing this forces a new resource to be created. | `string` | n/a | yes |
-| resource\_group\_name | The name of the resource group in which to create the network security group.<br>The Resource Group must already exist. | `string` | n/a | yes |
-| tags | A mapping of tags which should be assigned to Resources. | `map(string)` | `{}` | no |
+| Name                  | Description                                                                                                             | Type          | Default | Required |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------- | ------- | :------: |
+| name                  | The name of the network security group.<br>Changing this forces a new resource to be created.                           | `string`      | n/a     |   yes    |
+| resource\_group\_name | The name of the resource group in which to create the network security group.<br>The Resource Group must already exist. | `string`      | n/a     |   yes    |
+| tags                  | A mapping of tags which should be assigned to Resources.                                                                | `map(string)` | `{}`    |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| id | The network security group id. |
-| location | The location/region where the network security group is created. |
-| name | The network security group name. |
+| Name                  | Description                                                                 |
+| --------------------- | --------------------------------------------------------------------------- |
+| id                    | The network security group id.                                              |
+| location              | The location/region where the network security group is created.            |
+| name                  | The network security group name.                                            |
 | resource\_group\_name | The name of the resource group where the network security group is created. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
