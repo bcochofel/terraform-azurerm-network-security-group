@@ -1,0 +1,23 @@
+output "name" {
+  description = "The network security group name."
+  value       = azurerm_network_security_group.nsg.name
+}
+
+output "id" {
+  description = "The network security group id."
+  value       = azurerm_network_security_group.nsg.id
+}
+
+output "resource_group_name" {
+  description = <<EOT
+The name of the resource group where the network security group is created.
+EOT
+  value       = azurerm_virtual_network.vnet.resource_group_name
+}
+
+output "location" {
+  description = <<EOT
+The location/region where the network security group is created.
+EOT
+  value       = azurerm_virtual_network.vnet.location
+}
