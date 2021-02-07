@@ -7,9 +7,31 @@ This module is inspired on the work from [this](https://github.com/Azure/terrafo
 # Usage
 
 ```hcl:examples/basic/main.tf
+provider "azurerm" {
+  features {}
+}
+
+module "rg" {
+  source  = "bcochofel/resource-group/azurerm"
+  version = "1.2.0"
+
+  name     = "rg-nsg-basic-example"
+  location = "North Europe"
+}
+
+module "nsg" {
+  source = "../.."
+
+  name                = "nsg-basic-example"
+  resource_group_name = module.rg.name
+
+  depends_on = [module.rg]
+}
+
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 | Name | Version |
@@ -36,6 +58,7 @@ This module is inspired on the work from [this](https://github.com/Azure/terrafo
 No output.
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 
 # Run tests
 
