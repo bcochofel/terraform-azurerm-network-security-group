@@ -9,6 +9,7 @@
 - markdown lint
 
 ### Feat
+- output variables
 - nsg resource
 
 
