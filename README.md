@@ -66,7 +66,6 @@ module "nsg" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 | Name | Version |
@@ -79,6 +78,18 @@ module "nsg" {
 | Name | Version |
 |------|---------|
 | azurerm | >= 2.41.0 |
+
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [azurerm_network_security_group](https://registry.terraform.io/providers/hashicorp/azurerm/2.41.0/docs/resources/network_security_group) |
+| [azurerm_network_security_rule](https://registry.terraform.io/providers/hashicorp/azurerm/2.41.0/docs/resources/network_security_rule) |
+| [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/2.41.0/docs/data-sources/resource_group) |
 
 ## Inputs
 
@@ -104,7 +115,6 @@ module "nsg" {
 | location | The location/region where the network security group is created. |
 | name | The network security group name. |
 | resource\_group\_name | The name of the resource group where the network security group is created. |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 
