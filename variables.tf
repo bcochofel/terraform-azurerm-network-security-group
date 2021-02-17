@@ -18,6 +18,11 @@ The name of the network security group.
 Changing this forces a new resource to be created.
 EOT
   type        = string
+
+  validation {
+    condition     = length(var.name) >= 1 && length(var.name) <= 80 && can(regex("^[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$", var.name))
+    error_message = "Invalid name (check Azure Resource naming restrictions for more info)."
+  }
 }
 
 variable "predefined_rules" {
