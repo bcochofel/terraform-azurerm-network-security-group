@@ -14,7 +14,7 @@ provider "azurerm" {
 
 module "rg" {
   source  = "bcochofel/resource-group/azurerm"
-  version = "1.2.0"
+  version = "1.4.0"
 
   name     = "rg-nsg-firewall-rules-example"
   location = "North Europe"
@@ -67,6 +67,7 @@ module "nsg" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 | Name | Version |
