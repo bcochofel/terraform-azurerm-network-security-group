@@ -1,6 +1,7 @@
 # terraform-azurerm-network-security-group
 
 Terraform module to create Azure Network Security Group.
+This module also validates the name according to the Azure Resource naming restrictions.
 
 This module is inspired on the work from [this](https://github.com/Azure/terraform-azurerm-network-security-group) repository.
 
@@ -13,7 +14,7 @@ provider "azurerm" {
 
 module "rg" {
   source  = "bcochofel/resource-group/azurerm"
-  version = "1.2.0"
+  version = "1.4.0"
 
   name     = "rg-nsg-firewall-rules-example"
   location = "North Europe"
@@ -71,7 +72,7 @@ module "nsg" {
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.20 |
+| terraform | >= 0.13.0 |
 | azurerm | >= 2.41.0 |
 
 ## Providers
@@ -128,6 +129,7 @@ go test -v
 
 ## References
 
+* [Azure Resource naming restrictions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
 * [Azure Network Security Group Overview](https://docs.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
 * [Terraform azurerm_network_security_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group)
 * [Terraform azurerm_network_security_rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule)
